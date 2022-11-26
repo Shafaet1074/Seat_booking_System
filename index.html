@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h1?>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="city">
+
+    
+    
+    <h2 class="Header">Register Here for booking Slot</h2>
+    <h4>Please read the instructioon carefully</h4>
+    <ul>
+        <li>Please enter the all information and select your desired day.Please enter a correct SID number </li>
+        <li>Please check the number of available seats before submitting</li>
+        <li>Register only to one slot</li>
+      </ul>
+      <form action="includes/contact.php" method="post">
+
+        <label for="First_Name">Full Name:</label>
+        <input name="first_name" id="First_Name" type="text" />
+        <label for="Name">Student ID:</label>
+        <input name="last_name" id="Last_Name" type="text" /> 
+    
+        <label for="Email">Email:</label>
+        <input name="email" id="Email" type="email" />
+        <br>
+        <br>
+        <label for="Time slots">Choose a available time slots:</label>
+        <select name="cars" id="cars">
+          <option value="volvo" id="sat">Saturday_10.00 am - 11.30 am</option>
+          <option value="saab" id="sun">Sunday_10.00 am - 11.30 am</option>
+          <option value="opel" id="thurs">Thursday_10.00 am - 11.30 am</option>
+          <option value="audi" id="fri">Friday_10.00 am - 11.30 am</option>
+        </select>
+        
+        <br>
+        <br>
+        <br>
+        
+        
+        <input type="submit" value="Submit" id="submit" onclick="seat_available()"/>
+    </form> 
+    
+    </div>
+    <script>
+        function seat_available(){
+        let sat=document.getElementById("sat");
+        let sun=document.getElementById("sun");
+        let thurs=document.getElementById("thurs");
+        let fri=document.getElementById("fri");
+        let submit=document.getElementById("submit");
+        let sat_count=0;
+        let sun_count=0;
+        let thurs_count=0;
+        let fri_count=0;
+       
+
+        //saturday 
+        if(submit==sat){
+            sat_count=sat_count+1;
+         if(sat_count==7){
+            window.alert("seat not available");
+        }
+        }
+        //sunday
+        else if(submit==sun){
+            sun_count=sun_count+1;
+         if(sun_count==7){
+            window.alert("seat not available"); 
+
+         }   
+        }
+        //thursday
+        else if(submit==thurs){
+            thurs_count=thurs_count+1;
+         if(thurs_count==7){
+            window.alert("seat not available"); 
+
+         }   
+        }
+        //friday
+        else (submit==fri);
+            fri_count=fri_count+1;
+            console.log(fri_count); 
+         if(fri_count==7){
+            window.alert("seat not available"); 
+
+         }   
+        }
+        seat_available()
+    
+
+
+    </script>
+    
+</body>
+</html>
